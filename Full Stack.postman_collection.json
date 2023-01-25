@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "589808db-f871-4228-bcea-bbfacfbf02fd",
+		"name": "Full Stack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22759787"
+	},
+	"item": [
+		{
+			"name": "Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"client_id\":\"5IlYhQTzSZL3Ax8TtSmMpnEEdCishQEJ\",\r\n\t\"client_secret\":\"rrBf89OkVL-3CX6HtuHnMct9I6sgTe-xtX9XV2dOkDRdIj7ECRBik4RHBCDmh4H\",\r\n\t\"grant_type\":\"client_credentials\",\r\n\t\"audience\":\"https://giftcards-sandbox.reloadly.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://auth.reloadly.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"auth",
+						"reloadly",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product by ISO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/com.reloadly.giftcards-v1+json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://giftcards-sandbox.reloadly.com/countries/ae/products",
+					"protocol": "https",
+					"host": [
+						"giftcards-sandbox",
+						"reloadly",
+						"com"
+					],
+					"path": [
+						"countries",
+						"ae",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
